@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 运行期真实凭据与数据，绝不入库
+.env
+data/messages.db
+data/messages.db-wal
+data/messages.db-shm
+data/state.json
+data/llm_endpoints.json
+
+!data/llm_endpoints.example.json

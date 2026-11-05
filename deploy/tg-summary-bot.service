@@ -1,0 +1,22 @@
+[Unit]
+Description=Telegram Group Summary Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USER
+WorkingDirectory=/opt/tg-summary-bot
+EnvironmentFile=/opt/tg-summary-bot/.env
+ExecStart=/opt/tg-summary-bot/.venv/bin/python /opt/tg-summary-bot/bot.py
+Restart=always
+RestartSec=5
+# 只允许写自己的数据目录
+ReadWritePaths=/opt/tg-summary-bot/data
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

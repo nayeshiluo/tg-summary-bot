@@ -1,0 +1,18 @@
+[
+  {
+    "id": "primary",
+    "name": "主节点",
+    "url": "https://api.example.com/v1/chat/completions",
+    "key_env": "LLM_API_KEY",
+    "model": "your-model-name",
+    "timeout": 40
+  },
+  {
+    "id": "backup",
+    "name": "备用节点",
+    "url": "https://api2.example.com/v1/chat/completions",
+    "key_env": "LLM_BACKUP_API_KEY",
+    "model": "your-backup-model",
+    "timeout": 35
+  }
+]
